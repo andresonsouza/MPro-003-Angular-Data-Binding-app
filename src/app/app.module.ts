@@ -5,11 +5,13 @@ import { MatCardModule, MatInputModule, MatButtonModule } from '@angular/materia
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,

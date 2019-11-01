@@ -1,0 +1,22 @@
+<p>
+    property-binding works!
+</p>
+
+<button mat-button color="primary">My first button</button> <br>
+
+<button mat-button [color]="color">Salvar</button> <br>
+<button mat-button color="primary">{{texto | uppercase}}</button> <br>
+<button mat-button color="primary" [disabled]="disabled">Disabled</button> <br>
+<button mat-button color="primary" [disabled]="!disabled">Enabled</button> <br>
+<button mat-button color="colors[idx]" >Hover | Array</button>
+
+
+<!-- ngOnInit() é uma função que é carregada depois que todo componente visual do html
+foi inicializado -->
+<!-- O constructor normalmente é carregado primeiro mas quando ele é inicializado
+muitas partes declaradas dentro do component.html ainda não foi inicializada -->
+<!-- Então quando queremos fazer alguma alteração que reflita no comportamento visual
+devemos utilizar ngOnInit -->
+
+<!-- Property binding é utilizado para controlar o funcionamento visual através dos métodos
+declarados dentro das classes criadas -->
