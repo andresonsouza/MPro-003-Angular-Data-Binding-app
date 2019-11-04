@@ -1,0 +1,15 @@
+<p>
+    event-binding works!
+</p>
+
+<section>
+    <button mat-button color="primary" (click)="save()"> {{ buttonAction }} </button>
+    <button mat-button color="warn" (click)="inc()"> {{ buttonName }} </button>
+</section>
+
+<section>
+    <button mat-button color="primary"> {{ conteudoBotao1 }} </button>
+    <button mat-button color="warn"> {{ conteudoBotao2 }} </button>
+
+    <button mat-button color="warn" (click)="disable()"> Disable </button>
+</section>
