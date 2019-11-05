@@ -10,8 +10,11 @@ export class EventBindingComponent implements OnInit {
   buttonName = 'My button';
   buttonAction = 'Save';
   i = 0;
-  conteudoBotao1 = '';
-  conteudoBotao2 = '';
+  conteudoBotao1 = 'Submit';
+  conteudoBotao2 = 'Login';
+
+  SpinnerMode = 'determinate';
+  btnEnable = true;
 
   constructor() { }
 
@@ -25,6 +28,16 @@ save() {
 inc() {
   this.i++;
   this.buttonName = 'It was clicked ' + this.i + ' times';
+}
+
+disable() {
+  this.btnEnable = false;
+  this.SpinnerMode = 'indeterminate';
+  setTimeout (() => {
+    this.btnEnable = true;
+    this.SpinnerMode = 'determinate';
+  }, 3000 );
+
 }
 
 }

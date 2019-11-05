@@ -3,13 +3,14 @@
 </p>
 
 <section>
-    <button mat-button color="primary" (click)="save()"> {{ buttonAction }} </button>
-    <button mat-button color="warn" (click)="inc()"> {{ buttonName }} </button>
+    <button mat-button color="warn" (click)="save()" [disabled]="!btnEnable"> {{ buttonAction }} </button>
+    <button mat-button color="warn" (click)="inc()" [disabled]="!btnEnable"> {{ buttonName }} </button>
 </section>
 
 <section>
-    <button mat-button color="primary"> {{ conteudoBotao1 }} </button>
-    <button mat-button color="warn"> {{ conteudoBotao2 }} </button>
-
-    <button mat-button color="warn" (click)="disable()"> Disable </button>
+    <button mat-button color="primary" [disabled]="!btnEnable"> {{ conteudoBotao1 }} </button>
+    <button mat-button color="primary" [disabled]="!btnEnable"> {{ conteudoBotao2 }} </button>
+    <button mat-button color="primary" (click)="disable()"> Disable </button>
+    <mat-progress-spinner color="primary" [mode]="SpinnerMode" [value]="0">
+    </mat-progress-spinner>
 </section>
