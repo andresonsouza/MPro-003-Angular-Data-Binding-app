@@ -15,6 +15,7 @@ export class EventBindingComponent implements OnInit {
 
   SpinnerMode = 'determinate';
   btnEnable = true;
+  valueinc = 0;
 
   constructor() { }
 
@@ -37,7 +38,11 @@ disable() {
     this.btnEnable = true;
     this.SpinnerMode = 'determinate';
   }, 3000 );
+  this.valueinc++;
 
 }
 
 }
+
+// Exercício:
+// Aumente o tamanho da barra de progresso do Spinner conforme o botão Disable seja clicado
