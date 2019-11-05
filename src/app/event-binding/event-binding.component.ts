@@ -22,25 +22,28 @@ export class EventBindingComponent implements OnInit {
   ngOnInit() {
   }
 
-save() {
-  console.log('Click');
-}
+  save() {
+    console.log('Click');
+  }
 
-inc() {
-  this.i++;
-  this.buttonName = 'It was clicked ' + this.i + ' times';
-}
+  inc() {
+    this.i++;
+    this.buttonName = 'It was clicked ' + this.i + ' times';
+  }
 
-disable() {
-  this.btnEnable = false;
-  this.SpinnerMode = 'indeterminate';
-  setTimeout (() => {
-    this.btnEnable = true;
-    this.SpinnerMode = 'determinate';
-  }, 3000 );
-  this.valueinc++;
+  disable() {
+    this.btnEnable = false;
+    this.SpinnerMode = 'indeterminate';
+    setTimeout(() => {
+      this.btnEnable = true;
+      this.SpinnerMode = 'determinate';
+    }, 3000);
+    this.valueinc++;
+  }
 
-}
+  cbChange(event: any) {
+    console.log(event);
+  }
 
 }
 

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule } from '@angular/material';
+
+import { MatCardModule,
+         MatInputModule,
+         MatButtonModule,
+         MatProgressSpinnerModule,
+         MatCheckboxModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -22,7 +27,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
