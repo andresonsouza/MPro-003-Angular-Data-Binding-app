@@ -5,8 +5,8 @@ import { MatCardModule,
          MatInputModule,
          MatButtonModule,
          MatProgressSpinnerModule,
-         MatCheckboxModule } from '@angular/material';
-
+         MatCheckboxModule,
+         MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,7 +28,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
