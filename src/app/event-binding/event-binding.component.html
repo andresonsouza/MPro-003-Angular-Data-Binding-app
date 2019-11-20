@@ -1,33 +1,41 @@
 <p>
-    event-binding works!
+  event-binding works!
 </p>
 
 <section>
-    <button mat-button color="warn" (click)="save()" [disabled]="!btnEnable"> {{ buttonAction }} </button>
-    <button mat-button color="warn" (click)="inc()" [disabled]="!btnEnable"> {{ buttonName }} </button>
+  <button mat-button color="warn" (click)="save()" [disabled]="!btnEnable"> {{ buttonAction }} </button>
+  <button mat-button color="warn" (click)="inc()" [disabled]="!btnEnable"> {{ buttonName }} </button>
 </section>
 
 <section>
-    <button mat-button color="primary" [disabled]="!btnEnable"> {{ conteudoBotao1 }} </button>
-    <button mat-button color="primary" [disabled]="!btnEnable"> {{ conteudoBotao2 }} </button>
-    <button mat-button color="primary" (click)="disable()"> Disable </button>
-    <mat-progress-spinner color="primary" [mode]="SpinnerMode" [value]="valueinc">
-    </mat-progress-spinner>
+  <button mat-button color="primary" [disabled]="!btnEnable"> {{ conteudoBotao1 }} </button>
+  <button mat-button color="primary" [disabled]="!btnEnable"> {{ conteudoBotao2 }} </button>
+  <button mat-button color="primary" (click)="disable()"> Disable </button>
+  <mat-progress-spinner color="primary" [mode]="SpinnerMode" [value]="valueinc">
+  </mat-progress-spinner>
 </section>
 
 <section>
-    <p>
-        <mat-checkbox value="" color="warn" (change)="cbChange($event)">Disable / Enable</mat-checkbox>
-    </p>
-    <p>
+  <p>
+    <mat-checkbox value="" color="warn" (change)="cbChange($event)">Disable / Enable</mat-checkbox>
+  </p>
+  <p>
+    <mat-card>
+      <mat-card-content>
         <mat-form-field>
-            <mat-label>Cars</mat-label>
-            <select matNativeControl required>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
+          <mat-label>Cars</mat-label>
+          <mat-select matNativeControl required [disabled]="selectDisabled" (selectionChange)="selectionChange($event)">
+            <mat-option value="1">Volvo</mat-option>
+            <mat-option value="2">Saab</mat-option>
+            <mat-option value="3">Mercedes</mat-option>
+            <mat-option value="4">Audi</mat-option>
+          </mat-select>
         </mat-form-field>
-    </p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <p>Selected Option {{ selectedOption }}</p>
+      </mat-card-actions>
+    </mat-card>
+  </p>
 </section>
