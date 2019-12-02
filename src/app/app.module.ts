@@ -14,13 +14,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     StringInterpolationComponent,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TwoWayDataBindingComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
