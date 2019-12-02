@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StringInterpolationComponent } from '../string-interpolation/string-interpolation.component';
 
 @Component({
   selector: 'app-two-way-data-binding',
@@ -8,8 +7,19 @@ import { StringInterpolationComponent } from '../string-interpolation/string-int
 })
 export class TwoWayDataBindingComponent implements OnInit {
 
-  name1 = '';
-  email = '';
+  name1 = 'User';
+  email = 'example@mail.com';
+
+  client = {
+    firstName: 'Andreson',
+    lastName: 'Souza',
+    age: 33,
+    address: {
+      street: 'Rua Trinta e Cinco',
+      neighborhood: 'Loteamento Primavera',
+      number: '145'
+    }
+  };
 
   constructor() { }
 
